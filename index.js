@@ -128,3 +128,7 @@ window.onkeyup = function(evt){
         buttonPressed = 0;
     }
 }
+
+window.addEventListener("touchstart", function(e){
+    e.preventDefault();
+});
