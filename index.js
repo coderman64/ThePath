@@ -110,6 +110,7 @@ function drawAll(){
         }
         distance -= speed;
     }
+    c.fillText(mouseLoc.x.toString()+","+mouseLoc.y.toString(),50,50);
 }
 
 window.onkeydown = function(evt){
