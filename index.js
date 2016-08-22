@@ -132,10 +132,10 @@ window.onkeyup = function(evt){
 }
 
 window.addEventListener("touchstart",function(e){
-    var rect = canvi.getBoundingClientRect();
+    var rect1 = canvi.getBoundingClientRect();
     mouseLoc = {
-       x: e.touches[0].PageX,
-       y: e.touches[0].PageY
+       x: e.touches[0].PageX - rect1.left,
+       y: e.touches[0].PageY - rect1.top
     }; //change the "mouseLoc" variable to reflect the mouse's current position
     if(gameEnded == false){
     if(mouseLoc.x>50){
