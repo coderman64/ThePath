@@ -170,6 +170,7 @@ window.addEventListener("touchstart",function(e){
         points = [new vect2(250,500), new vect2(250,400)];
         speed = 1;
         gameEnded = false;
+        pathPosition = 250;
     }
     e.preventDefault();
 });
