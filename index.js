@@ -134,8 +134,8 @@ window.onkeyup = function(evt){
 window.addEventListener("touchstart",function(e){
     var rect = canvi.getBoundingClientRect();
     mouseLoc = {
-       x: e.touches[0].PageX - rect.left,
-       y: e.touches[0].PageY - rect.top
+       x: e.touches[0].PageX,
+       y: e.touches[0].PageY
     }; //change the "mouseLoc" variable to reflect the mouse's current position
     if(gameEnded == false){
     if(mouseLoc.x>250){
@@ -147,7 +147,7 @@ window.addEventListener("touchstart",function(e){
     }
 });
 
-window.addEventListener("mouseup",function(e){
+window.addEventListener("touchend",function(e){
     if(gameEnded == false){
         points[points.length] = new vect2(pathPosition,400-distance);
         buttonPressed = 0;
