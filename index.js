@@ -110,7 +110,7 @@ function drawAll(){
         }
         distance -= speed;
     }
-    c.fillStyle = "#ffffff";
+    c.fillStyle = "#000";
     c.font = "20px Georgia";
     c.fillText(mouseLoc.x.toString()+","+mouseLoc.y.toString(),50,50);
 }
