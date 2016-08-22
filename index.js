@@ -113,13 +113,11 @@ function drawAll(){
         }
         distance -= speed;
         if(speed < 0.01&&speed > -0.01){
-           c.fillStyle = "#000000";
-           c.fillRect(150,225,200,50);
-           c.fillStyle ="#ffffff";
+           c.fillStyle ="#000000";
            c.font = "20px Georgia";
            c.textAlign = "center";
            c.textBaseline = "middle";
-           c.fillText("Play Again",250,250);
+           c.fillText("Tap Anywhere To Play Again",250,250);
            speed = 0;
            if(button != 0){
                //reset all obstacles
