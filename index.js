@@ -162,7 +162,9 @@ window.addEventListener("touchstart",function(e){
         speed = 1;
         gameEnded = false;
         pathPosition = 250;
-    }
+    }else{
+        
+    
     if(mouseLoc.x>250){
         buttonPressed = 1;
     }else{
@@ -170,6 +172,7 @@ window.addEventListener("touchstart",function(e){
     }
     if(gameEnded == false){
     points[points.length] = new vect2(pathPosition,400-distance);
+    }
     }
     
     e.preventDefault();
