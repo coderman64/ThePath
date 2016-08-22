@@ -121,6 +121,17 @@ function drawAll(){
            c.textBaseline = "middle";
            c.fillText("Play Again",250,250);
            speed = 0;
+           if(button != 0&&mouseLoc.x>150&&mouseLoc.y>225&&mouseLoc.x<350&&mouseLoc.x<275){
+               //reset all obstacles
+               obstacles = [];
+               for(var i = 0; i<20; i++){
+                   obstacles[i] = new obstacle(Math.round(Math.random()*500),Math.round(Math.random()*500),Math.round(Math.random()*50));
+               }
+               //reset line
+               points = [new vect2(250,500), new vect2(250,400)];
+               speed = 1;
+               gameEnded = false;
+           }
         }
     }
     //c.fillStyle = "#000";
