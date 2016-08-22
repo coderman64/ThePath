@@ -109,13 +109,13 @@ function drawAll(){
             speed *= -0.1;
         }
         distance -= speed;
-        /*if(speed < 0.01&&speed > -0.01){
-           c.fillStyle = "#000";
+        if(speed < 0.01&&speed > -0.01){
+           c.fillStyle = "#000000";
            c.fillRect(150,200,200,100);
-           c.fillStyle ="#fff";
+           c.fillStyle ="#ffffff";
            c.font = "20px Georgia";
-           c.fillText("Play Again",170,240
-        }*/
+           c.fillText("Play Again",170,240);
+        }
     }
     //c.fillStyle = "#000";
     //c.font = "20px Georgia";
