@@ -164,12 +164,13 @@ window.addEventListener("touchstart",function(e){
        x: e.touches[0].pageX - rect1.left,
        y: e.touches[0].pageY - rect1.top
     }; //change the "mouseLoc" variable to reflect the mouse's current position
-    if(gameEnded == false){
+    
     if(mouseLoc.x>250){
         buttonPressed = 1;
     }else{
         buttonPressed = -1;
     }
+    if(gameEnded == false){
     points[points.length] = new vect2(pathPosition,400-distance);
     }
     e.preventDefault();
@@ -178,6 +179,6 @@ window.addEventListener("touchstart",function(e){
 window.addEventListener("touchend",function(e){
     if(gameEnded == false){
         points[points.length] = new vect2(pathPosition,400-distance);
-        buttonPressed = 0;
     }
+    buttonPressed = 0;
 });
