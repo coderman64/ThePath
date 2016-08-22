@@ -117,7 +117,9 @@ function drawAll(){
            c.fillRect(150,225,200,50);
            c.fillStyle ="#ffffff";
            c.font = "20px Georgia";
-           c.fillText("Play Again",170,240);
+           c.textAlign = "center";
+           c.textBaseline = "middle";
+           c.fillText("Play Again",250,250);
            speed = 0;
         }
     }
