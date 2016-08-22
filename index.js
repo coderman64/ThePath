@@ -138,13 +138,14 @@ window.addEventListener("touchstart",function(e){
        y: e.touches[0].PageY
     }; //change the "mouseLoc" variable to reflect the mouse's current position
     if(gameEnded == false){
-    if(mouseLoc.x>250){
+    if(mouseLoc.x>50){
         buttonPressed = 1;
     }else{
         buttonPressed = -1;
     }
     points[points.length] = new vect2(pathPosition,400-distance);
     }
+    e.preventDefault();
 });
 
 window.addEventListener("touchend",function(e){
