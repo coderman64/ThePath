@@ -151,15 +151,6 @@ window.addEventListener("touchstart",function(e){
        x: e.touches[0].pageX - rect1.left,
        y: e.touches[0].pageY - rect1.top
     }; //change the "mouseLoc" variable to reflect the mouse's current position
-    
-    if(mouseLoc.x>250){
-        buttonPressed = 1;
-    }else{
-        buttonPressed = -1;
-    }
-    if(gameEnded == false){
-    points[points.length] = new vect2(pathPosition,400-distance);
-    }
     if(gameEnded&&speed>-0.01&&speed<0.01){
         //reset all obstacles
         obstacles = [];
@@ -172,6 +163,15 @@ window.addEventListener("touchstart",function(e){
         gameEnded = false;
         pathPosition = 250;
     }
+    if(mouseLoc.x>250){
+        buttonPressed = 1;
+    }else{
+        buttonPressed = -1;
+    }
+    if(gameEnded == false){
+    points[points.length] = new vect2(pathPosition,400-distance);
+    }
+    
     e.preventDefault();
 });
 
