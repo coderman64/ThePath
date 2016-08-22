@@ -132,3 +132,7 @@ window.onkeyup = function(evt){
 window.addEventListener("touchstart", function(e){
     e.preventDefault();
 });
+
+window.addEventListener("mousedown",function(e){
+
+});
