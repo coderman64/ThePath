@@ -109,10 +109,17 @@ function drawAll(){
             speed *= -0.1;
         }
         distance -= speed;
+        if(speed < 0.01&&speed > -0.01){
+           c.fillStyle = "#000";
+           c.fillRect(150,200,200,100);
+           c.fillStyle ="#fff";
+           c.font = "20px Georgia";
+           c.fillText("Play Again",170,240
+        }
     }
-    c.fillStyle = "#000";
-    c.font = "20px Georgia";
-    c.fillText(mouseLoc.x.toString()+","+mouseLoc.y.toString(),50,50);
+    //c.fillStyle = "#000";
+    //c.font = "20px Georgia";
+    //c.fillText(mouseLoc.x.toString()+","+mouseLoc.y.toString(),50,50);
 }
 
 window.onkeydown = function(evt){
