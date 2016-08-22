@@ -138,7 +138,7 @@ window.addEventListener("touchstart",function(e){
        y: e.touches[0].PageY - rect1.top
     }; //change the "mouseLoc" variable to reflect the mouse's current position
     if(gameEnded == false){
-    if(mouseLoc.x>0){
+    if(mouseLoc.x){
         buttonPressed = 1;
     }else{
         buttonPressed = -1;
