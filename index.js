@@ -111,10 +111,11 @@ function drawAll(){
         distance -= speed;
         if(speed < 0.01&&speed > -0.01){
            c.fillStyle = "#000000";
-           c.fillRect(150,200,200,100);
+           c.fillRect(150,225,200,50);
            c.fillStyle ="#ffffff";
            c.font = "20px Georgia";
            c.fillText("Play Again",170,240);
+           speed = 0;
         }
     }
     //c.fillStyle = "#000";
