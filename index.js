@@ -27,6 +27,8 @@ for(var i = 0; i<20; i++){
     obstacles[i] = new obstacle(Math.round(Math.random()*500),Math.round(Math.random()*500),Math.round(Math.random()*50));
 }
 
+var mouseLoc = {x:0,y:0};
+
 pathPosition = 250;
 
 points[0] = new vect2(250,500);
@@ -135,8 +137,23 @@ window.addEventListener("touchstart", function(e){
 
 window.addEventListener("mousedown",function(e){
     var rect = canvi.getBoundingClientRect();
-    this.mouseLoc = {
+    mouseLoc = {
        x: evt.clientX - rect.left,
        y: evt.clientY - rect.top
     }; //change the "mouseLoc" variable to reflect the mouse's current position
+    if(gameEnded == false){
+    if(mouseLoc.x>250){
+        buttonPressed = 1;
+    }else{
+        buttonPressed = -1;
+    }
+    points[points.length] = new vect2(pathPosition,400-distance);
+    }
+});
+
+window.addEventListener("mouseup",function(e){
+    if(gameEnded == false){
+        points[points.length] = new vect2(pathPosition,400-distance);
+        buttonPressed = 0;
+    }
 });
