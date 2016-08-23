@@ -12,6 +12,9 @@ var buttonPressed = 0;
 var gameEnded = false;
 var speed = 1;
 
+canvi.style.height = window.innerHeight;
+canvi.style.width = window.innerHeight;
+
 var vect2 = function(x,y){
     this.x = x;
     this.y = y;
