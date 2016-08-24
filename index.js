@@ -103,7 +103,7 @@ function drawObstacles(){
                 obstacles[i].active = false;
                 speed = 0;
                 for(var i = 0; i<20;i++){
-                    particles[i] = new particle(points[points.length-1].x,points[points.length-1].y,5,Math.round(Math.random()*360),Math.random()*0.8+0.2,Math.round(Math.random()*360));
+                    particles[i] = new particle(points[points.length-1].x,points[points.length-1].y,5,Math.round(Math.random()*360),Math.random()*0.5+0.5,Math.round(Math.random()*360));
                 }
             }
         }else if(gameEnded){
@@ -146,7 +146,7 @@ function drawAll(){
         if(points[points.length-1].x <0||points[points.length-1].x>500){
             gameEnded = true;
             for(var i = 0; i<20;i++){
-                particles[i] = new particle(points[points.length-1].x,points[points.length-1].y,5,Math.round(Math.random()*360),Math.random()*0.8+0.2,Math.round(Math.random()*360));
+                particles[i] = new particle(points[points.length-1].x,points[points.length-1].y,5,Math.round(Math.random()*360),Math.random()*0.5+0.5,Math.round(Math.random()*360));
             }
         }
     }else{
