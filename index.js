@@ -229,8 +229,8 @@ window.addEventListener("mousedown",function(e){
 window.addEventListener("touchstart",function(e){
     var rect1 = canvi.getBoundingClientRect();
     mouseLoc = {
-       x: e.touches[0].pageX - rect1.left,
-       y: e.touches[0].pageY - rect1.top
+       x: e.touches[0].pageX,
+       y: e.touches[0].pageY
     }; //change the "mouseLoc" variable to reflect the mouse's current position
     if(gameEnded&&speed>-0.01&&speed<0.01){
         resetGame();
