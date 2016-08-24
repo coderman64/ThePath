@@ -30,7 +30,7 @@ particle.prototype.draw = function(){
     c.fillStyle = "rgba(0,0,0,"+(this.alpha/255).toString()+")";
     c.fillRect(0-this.size,0-this.size,this.size*2,this.size*2);
     c.setTransform(1,0,0,1,0,0);
-    this.angle += 0.1;
+    this.angle += 0.3*this.speed;
     this.alpha -= this.speed*5;
 
     var xChange = Math.cos(this.direction)*this.speed;
