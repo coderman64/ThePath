@@ -161,7 +161,9 @@ function drawAll(){
         }
         distance -= speed;
         if(speed < 0.01&&speed > -0.01&&distance == 0){
-           c.fillStyle ="#000000";
+           c.fillStyle = "rgba(255,255,255,0.8)";
+           c.fillRect(0,0,500,500);
+           c.fillStyle = "#000000";
            c.font = "20px Georgia";
            c.textAlign = "center";
            c.textBaseline = "middle";
