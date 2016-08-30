@@ -167,7 +167,15 @@ function drawAll(){
            c.textBaseline = "middle";
            c.fillText("You forged a path "+score.toString()+"m long!",250,200);
            c.fillText("Tap Anywhere To Play Again",250,250);
+           if(score>=localStorage.getItem("HighScore")){
+               c.fillText("Thats a new high score!",250,225);
+           }else{
+               c.fillText("your highest score was: "+localStorage.getItem("HighScore"),250,225);
+           }
            speed = 0;
+           if(localStorage.getItem==null||score>localStorage.getItem("HighScore")){
+               localStorage.setItem("HighScore",score);
+           }
         }
     }
     //c.fillStyle = "#000";
